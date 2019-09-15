@@ -7,12 +7,14 @@ For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 BONUS: Can you do this in one pass?
 */
 
-public bool func(int k, List<Integer> list) {
-     for(int i = 0; i < list.size(); i++) {
-         for(int j = 0; j < list.size(); j++) {
-             if(list.get(i) + list.get(i + 1) = k) {
-             return true;
-             }
-         }  
-     }
+public bool func(int k, int[] arr) {
+    if(arr == nulll || arr.length == 2) {
+        return false;
+    }
+    Set<Integer> tmp = new HashSet<>();
+    for(int val : arr) {
+        if(tmp.contains(val))
+            return true;
+    }
+    return false;
 }
