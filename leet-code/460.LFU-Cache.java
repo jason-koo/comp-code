@@ -10,7 +10,6 @@ class LFUCache {
         this.capacity = capacity;
         values = new HashMap<>();
         counts = new HashMap<>();
-        lists = new HashMap<>();
         lists.put(1, new LinkedHashSet<>());
     }
 
